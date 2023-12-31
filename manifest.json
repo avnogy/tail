@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Tail Log",
   "description": "This extension scrolls to the end of a webpage.",
   "version": "1.0",
