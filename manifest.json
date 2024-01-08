@@ -1,15 +1,13 @@
 {
-  "name": "Tail Log",
-  "version": "1.0",
-  "description": "This extension scrolls to the end of a webpage.",
-  "manifest_version": 3,
-  "permissions": [
-    "activeTab"
-  ],
-  "browser_action": {
-    "default_icon": "icon.png"
-  },
-  "background": {
-    "service_worker": "background.js"
-  }
+	"manifest_version": 3,
+	"name": "Tail Log",
+	"description": "This extension scrolls to the end of a webpage.",
+	"version": "1.0",
+	"permissions": ["activeTab", "scripting"],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"action": {
+		"default_icon": "icon.png"
+	}
 }
