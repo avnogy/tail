@@ -1,7 +1,10 @@
 function scrollToBottom(tab) {
-  chrome.tabs.executeScript(tab.id, {
-      code: 'window.scrollTo(0, document.body.scrollHeight);'
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    function: () => {
+      window.scrollTo(0, document.body.scrollHeight);
+    },
   });
 }
 
-chrome.browserAction.onClicked.addListener((tab) => scrollToBottom(tab));
+chrome.action.onClicked.addListener(scrollToBottom);
